@@ -1,3 +1,27 @@
+"""
+MIT License
+
+Copyright (c) 2021 TheHamkerCat
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
 from pyrogram import filters
 from pyrogram.raw.functions.messages import DeleteHistory
 
@@ -42,12 +66,13 @@ async def pmpermit_func(_, message):
         user_id,
         results.query_id,
         results.results[0].id,
-        hide_via=True,
     )
 
 
 @app2.on_message(
-    filters.command("approve", prefixes=USERBOT_PREFIX) & SUDOERS & ~filters.via_bot
+    filters.command("approve", prefixes=USERBOT_PREFIX)
+    & SUDOERS
+    & ~filters.via_bot
 )
 @capture_err
 async def pm_approve(_, message):
@@ -61,11 +86,15 @@ async def pm_approve(_, message):
 
 
 @app2.on_message(
-    filters.command("disapprove", prefixes=USERBOT_PREFIX) & SUDOERS & ~filters.via_bot
+    filters.command("disapprove", prefixes=USERBOT_PREFIX)
+    & SUDOERS
+    & ~filters.via_bot
 )
 async def pm_disapprove(_, message):
     if not message.reply_to_message:
-        return await eor(message, text="Reply to a user's message to disapprove.")
+        return await eor(
+            message, text="Reply to a user's message to disapprove."
+        )
     user_id = message.reply_to_message.from_user.id
     if not await is_pmpermit_approved(user_id):
         await eor(message, text="User is already disapproved to pm")
@@ -81,7 +110,9 @@ async def pm_disapprove(_, message):
 
 
 @app2.on_message(
-    filters.command("block", prefixes=USERBOT_PREFIX) & SUDOERS & ~filters.via_bot
+    filters.command("block", prefixes=USERBOT_PREFIX)
+    & SUDOERS
+    & ~filters.via_bot
 )
 @capture_err
 async def block_user_func(_, message):
@@ -94,7 +125,9 @@ async def block_user_func(_, message):
 
 
 @app2.on_message(
-    filters.command("unblock", prefixes=USERBOT_PREFIX) & SUDOERS & ~filters.via_bot
+    filters.command("unblock", prefixes=USERBOT_PREFIX)
+    & SUDOERS
+    & ~filters.via_bot
 )
 async def unblock_user_func(_, message):
     if not message.reply_to_message:
