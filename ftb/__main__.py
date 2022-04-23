@@ -137,8 +137,8 @@ keyboard = InlineKeyboardMarkup(
 )
 
 
-@app.on_message(~filters.edited & filters.command("start"))
-async def start(_, message):
+@app.on_message(~filters.edited & filters.command("sttart"))
+async def sttart(_, message):
     if message.chat.type != "private":
         return await message.reply("Pm Me For More Details.", reply_markup=keyboard)
     if len(message.text.split()) > 1:
@@ -168,8 +168,8 @@ async def start(_, message):
     return
 
 
-@app.on_message(~filters.edited & filters.command("help"))
-async def help_command(_, message):
+@app.on_message(~filters.edited & filters.command("heelp"))
+async def heelp_command(_, message):
     if message.chat.type != "private":
         if len(message.command) >= 2:
             name = (message.text.split(None, 1)[1]).replace(" ", "_").lower()
@@ -218,7 +218,7 @@ async def help_command(_, message):
 
 async def help_parser(name, keyboard=None):
     if not keyboard:
-        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
+        keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "heelp"))
     return (
         """Hello {first_name}, My name is {bot_name}.
 I'm a group management bot with some useful features.
@@ -232,7 +232,7 @@ Also you can ask anything in Support Group.
     )
 
 
-@app.on_callback_query(filters.regex("bot_commands"))
+@app.on_callback_query(filters.regex("bbot_commands"))
 async def commands_callbacc(_, CallbackQuery):
     text, keyboard = await help_parser(CallbackQuery.from_user.mention)
     await app.send_message(
