@@ -84,7 +84,7 @@ async def sttart_bot():
 home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Commands 👮‍♂️", callback_data="bot_commands"),
+            InlineKeyboardButton(text="Coommands 👮‍♂️", callback_data="bbot_commands"),
             InlineKeyboardButton(
                 text="Channel",
                 url="https://t.me/Fintech_bots",
