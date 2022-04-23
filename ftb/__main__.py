@@ -26,7 +26,7 @@ loop = asyncio.get_event_loop()
 HELPABLE = {}
 
 
-async def start_bot():
+async def sttart_bot():
     global HELPABLE
 
     for module in ALL_MODULES:
