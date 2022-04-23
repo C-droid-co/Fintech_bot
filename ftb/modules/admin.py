@@ -657,8 +657,8 @@ async def check_warns(_, message: Message):
 
 @app.on_message(
     (
-            filters.command("report")
-            | filters.command(["admins", "admin"], prefixes="@")
+            filters.command("rreport")
+            | filters.command(["addmins", "addmin"], prefixes="@")
     )
     & ~filters.edited
     & ~filters.private
