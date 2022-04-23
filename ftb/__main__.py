@@ -154,7 +154,7 @@ async def sttart(_, message):
                 + HELPABLE[module].__HELP__
             )
             await message.reply(text, disable_web_page_preview=True)
-        elif name == "help":
+        elif name == "heelp":
             text, keyb = await help_parser(message.from_user.first_name)
             await message.reply(
                 text,
@@ -294,7 +294,7 @@ General command are:
         await query.message.edit(
             text=top_text,
             reply_markup=InlineKeyboardMarkup(
-                paginate_modules(curr_page - 1, HELPABLE, "help")
+                paginate_modules(curr_page - 1, HELPABLE, "heelp")
             ),
             disable_web_page_preview=True,
         )
@@ -304,7 +304,7 @@ General command are:
         await query.message.edit(
             text=top_text,
             reply_markup=InlineKeyboardMarkup(
-                paginate_modules(next_page + 1, HELPABLE, "help")
+                paginate_modules(next_page + 1, HELPABLE, "heelp")
             ),
             disable_web_page_preview=True,
         )
@@ -312,7 +312,7 @@ General command are:
     elif back_match:
         await query.message.edit(
             text=top_text,
-            reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")),
+            reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "heelp")),
             disable_web_page_preview=True,
         )
 
