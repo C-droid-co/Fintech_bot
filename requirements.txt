@@ -10,7 +10,7 @@ motor
 pillow
 psutil
 pykeyboard
-pyrogram
+pyrogram<2
 python-arq
 requests
 search-engine-parser
@@ -29,5 +29,3 @@ pytube
 cachetools
 dateparser
 telethon
-
-pyrogram
