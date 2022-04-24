@@ -29,3 +29,5 @@ pytube
 cachetools
 dateparser
 telethon
+
+pyrogram
