@@ -250,7 +250,7 @@ async def stats_callbacc(_, CallbackQuery):
     await app.answer_callback_query(CallbackQuery.id, text, show_alert=True)
 
 
-@app.on_callback_query(filters.regex(r"help_(.*?)"))
+@app.on_callback_query(filters.regex(r"heelp_(.*?)"))
 async def help_button(client, query):
     home_match = re.match(r"help_home\((.+?)\)", query.data)
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
