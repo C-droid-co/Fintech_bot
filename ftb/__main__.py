@@ -331,7 +331,7 @@ if __name__ == "__main__":
     uvloop.install()
     try:
         try:
-            loop.run_until_complete(start_bot())
+            loop.run_until_complete(sttart_bot())
         except asyncio.exceptions.CancelledError:
             pass
         loop.run_until_complete(asyncio.sleep(3.0))  # task cancel wait
