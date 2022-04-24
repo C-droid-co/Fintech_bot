@@ -102,7 +102,7 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[FintechBot✨](https://github.com/):**
+**[FintechBot✨](t.me/fintechbots):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
