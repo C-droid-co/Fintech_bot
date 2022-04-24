@@ -16,30 +16,37 @@
     "env": {
         "BOT_TOKEN": {
             "description": "Obtain a Telegram bot token by contacting @BotFather",
+            "value":"5136900001:AAFSBYbE4Afv4BFbaUbnvK5-QC8x_1L8GYY",
             "required": true
         },
         "API_ID": {
             "description": "API_ID of your Telegram Account my.telegram.org/apps",
+            "value": "3848094",
             "required": true
         },
         "API_HASH": {
             "description": "API_HASH of your Telegram Account my.telegram.org/apps",
+            "value": "b5be7dd84556db235436187271576566",
             "required": true
         },
         "SESSION_STRING": {
             "description": "Need for Userbot Module So u can execute .sh & .l cmd",
+            "value": "BACIVBLCW_WEbhpBhr23eY1MRdynt8ttW-uG1HfyFrhbet8Ippy8v3uHUlvSvGwWTyCCCdV3PR3w4wcGyvrVDFnw2XJYPQ6dapQJgakdIhFs8dTGfgy1DR3EhIDmwwaLVQMDWdzMWD83nA3C45C7b4sVNEdwmjCUA4tbwNSXHiuo4iDeDZK6N1ngZAgKsyufdNmpv7kk1a8QUTzoCB2T6QJN6qhC1PVP6g-o4zNx2pBNrZZl6D2r5tz0CfnguB5vcAbnClAHGN_TspXDbMd-chFtBIx66rgt3XnF9vF1i0BLtAoSE68CSpqsihKw1_Xxbsd7-Ws-ZAOVJMnW2rF-JFqOQ1nH3gA",
             "required": true
         },
         "SUDO_USERS_ID": {
             "description": "Sudo users have full access to everythin, don't trust anyone... ex:- 123456 654311 123456",
+            "value": "1129957342",
             "required": true
         },
         "LOG_GROUP_ID": {
             "description": "For logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
+            "value": "-693827769",
             "required": true
         },
         "GBAN_LOG_GROUP_ID": {
             "description": "gban logs. ex: '-123456'",
+            "value": "-693827769",
             "required": true
         },
         "WELCOME_DELAY_KICK_SEC": {
@@ -48,6 +55,7 @@
         },
         "MONGO_URL": {
             "description": "Get From Here. https://telegra.ph/How-To-get-Mongodb-URI-04-06",
+            "value": "mongodb+srv://Youngchris2005:admin@chris.fcoik.mongodb.net/Chris?retryWrites=true&w=majority",
             "required": true
         },
         "ARQ_API_URL": {
@@ -57,18 +65,22 @@
         },
         "MESSAGE_DUMP_CHAT": {
             "description": "Chat_id of the group where useless things will go",
+            "value": "-693827769",
             "required": true
         },
         "ARQ_API_KEY": {
             "description": "Get this from @ARQRobot.",
+            "value": "GPHXON-DPNOBI-FFMUBU-IUNOYN-ARQ",
             "required": true
         },
         "LOG_MENTIONS": {
             "description": "Fill 1 to turn this on, or 0 to turn it off.",
+            "value": "1",
             "required": true
         },
         "USERBOT_PREFIX": {
             "description": "Userbot command prefix, Leave it empty if you don't know what that is.",
+            "value": ".",
             "required": false
         },
         "RSS_DELAY": {
