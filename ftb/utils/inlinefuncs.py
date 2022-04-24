@@ -83,7 +83,7 @@ async def inline_help_func(__HELP__):
             title="Github Repo",
             description="Get Github Respository Of Bot.",
             input_message_content=InputTextMessageContent(
-                "https://github.com/thehamkercat/WilliamButcherBot"
+                "T.me/fintechbots"
             ),
             thumb_url="https://hamker.me/gjc9fo3.png",
         ),
