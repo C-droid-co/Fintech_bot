@@ -6,7 +6,7 @@ load_dotenv("config.env")
 
 HEROKU = bool(
     environ.get("DYNO")
-)  # NOTE Make it false if you're not deploying on heroku or docker.
+)  # NOTE Make it false if you'r not deploying it on heroku or docker.
 
 if HEROKU:
 
